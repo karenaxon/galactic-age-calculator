@@ -24,4 +24,8 @@ describe('Calculator', () => {
     expect(age1.marsAge).toEqual(66);
   });
 
+  test('jupiterAge rounded should return 22', () => {
+    expect(age1.jupiterAge).toEqual(415);
+  });
+
 });
