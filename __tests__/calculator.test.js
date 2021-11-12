@@ -2,7 +2,7 @@
 import Calculator from "../src/js/Calculator.js";
 
 describe('Calculator', () => {
-  let age1;
+  let age1, age2;
 
   beforeEach(() => {
     age1 = new Calculator(35);
@@ -28,8 +28,12 @@ describe('Calculator', () => {
     expect(age1.jupiterAge).toEqual(415);
   });
 
+  beforeEach(() => {
+    age2 = new Calculator(40, 77.3);
+  });
+
   test('humanLifeExpectancy should return 77.3', () => {
-    expect(age1.humanLifeExpectancy).toEqual(77.3);
+    expect(age2.humanLifeExpectancy).toEqual(77.3);
   });
 
 });
