@@ -27,4 +27,6 @@ export default class Calculator{
     let jupiterAge = Math.round(this.humanAge * 11.86);
     return jupiterAge;
   } 
+
+  //mercury, venus, mars, jupiter
 }
