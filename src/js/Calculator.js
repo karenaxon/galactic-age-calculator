@@ -2,6 +2,7 @@ export default class Calculator{
   constructor(humanAge, humanLifeExpectancy){
     this.humanAge = humanAge;
     this.humanLifeExpectancy = humanLifeExpectancy;
+    this.humanYearsLeft = this.humanYearsLeftCalculate();
 
     this.mercuryAge = this.mercuryAgeCalculate();
     this.mercuryYearsLeft = this.mercuryYearsLeftCalculate();
@@ -36,6 +37,11 @@ export default class Calculator{
     return jupiterAge;
   } 
 
+  humanYearsLeftCalculate() {
+    let humanYearsLeft = Math.round(this.humanLifeExpectancy) - this.humanAge;
+    return humanYearsLeft;
+  }
+  
   mercuryYearsLeftCalculate() {
     let mercuryYearsLeft = Math.round(this.humanLifeExpectancy * 3) - this.mercuryAge;
     return mercuryYearsLeft;
