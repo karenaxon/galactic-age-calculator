@@ -43,7 +43,7 @@ describe('Calculator', () => {
   });
 
   // #7
-  test('mercuryYearsLeft rounded should return 212', () => {
-    expect(age2.mercuryYearsLeft).toEqual(212);
+  test('mercuryYearsLeft rounded should return 224', () => {
+    expect(age2.mercuryYearsLeft).toEqual(224);
   });
 });
