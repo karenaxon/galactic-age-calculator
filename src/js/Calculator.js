@@ -32,7 +32,7 @@ export default class Calculator{
     return jupiterAge;
   } 
 
-  //venus, mars, jupiter
+  // mars, jupiter
 
   mercuryYearsLeftCalculate() {
     let mercuryYearsLeft = Math.round(this.humanLifeExpectancy * 3) - this.mercuryAge;

@@ -52,4 +52,9 @@ describe('Calculator', () => {
       expect(age2.venusYearsLeft).toEqual(2);
     });
 
+     // #9
+    test('marsYearsLeft rounded should return 7664', () => {
+      expect(age2.marsYearsLeft).toEqual(7664);
+    });
+
 });
