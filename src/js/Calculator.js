@@ -3,7 +3,7 @@ export default class Calculator{
     this.humanAge = humanAge;
     this.mercuryAge = this.mercuryAgeCalculate();
     this.venusAge = this.venusAgeCalculate();
-    this.marsAge = "";
+    this.marsAge = this.marsAgeCalculate();
     this.jupiterAge = "";
   }
 
@@ -17,4 +17,8 @@ export default class Calculator{
     return venusAge;
   }  
     
+  marsAgeCalculate() {
+    let marsAge = Math.round(this.humanAge * 1.88);
+    return marsAge;
+  }  
 }
