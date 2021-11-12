@@ -1,14 +1,18 @@
 export default class Calculator{
   constructor(humanAge, humanLifeExpectancy){
     this.humanAge = humanAge;
-    this.mercuryAge = this.mercuryAgeCalculate();
-    this.venusAge = this.venusAgeCalculate();
-    this.marsAge = this.marsAgeCalculate();
-    this.jupiterAge = this.jupiterAgeCalculate();
     this.humanLifeExpectancy = humanLifeExpectancy;
+
+    this.mercuryAge = this.mercuryAgeCalculate();
     this.mercuryYearsLeft = this.mercuryYearsLeftCalculate();
+
+    this.venusAge = this.venusAgeCalculate();
     this.venusYearsLeft = this.venusYearsLeftCalculate();
+
+    this.marsAge = this.marsAgeCalculate();
     this.marsYearsLeft = this.marsYearsLeftCalculate();
+
+    this.jupiterAge = this.jupiterAgeCalculate();
     this.jupiterYearsLeft = this.jupiterYearsLeftCalculate();
   }
 

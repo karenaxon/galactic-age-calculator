@@ -62,4 +62,9 @@ describe('Calculator', () => {
         expect(age2.jupiterYearsLeft).toEqual(22585);
       });
 
+       // #11
+      test('humanYearsLeft rounded should return 42', () => {
+        expect(age2.jupiterYearsLeft).toEqual(42);
+      });
+
 }); 
