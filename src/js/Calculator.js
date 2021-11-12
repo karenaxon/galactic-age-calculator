@@ -4,7 +4,7 @@ export default class Calculator{
     this.mercuryAge = this.mercuryAgeCalculate();
     this.venusAge = this.venusAgeCalculate();
     this.marsAge = this.marsAgeCalculate();
-    this.jupiterAge = "";
+    this.jupiterAge = this.jupiterAgeCalculate();
   }
 
   mercuryAgeCalculate() {
@@ -21,4 +21,9 @@ export default class Calculator{
     let marsAge = Math.round(this.humanAge * 1.88);
     return marsAge;
   }  
+
+  jupiterAgeCalculate() {
+    let jupiterAge = Math.round(this.humanAge * 11.86);
+    return jupiterAge;
+  } 
 }
