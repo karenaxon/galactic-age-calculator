@@ -20,4 +20,8 @@ describe('Calculator', () => {
     expect(age1.venusAge).toEqual(22);
   });
 
+  test('marsAge rounded should return 22', () => {
+    expect(age1.marsAge).toEqual(66);
+  });
+
 });

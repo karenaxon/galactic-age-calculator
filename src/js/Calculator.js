@@ -15,5 +15,6 @@ export default class Calculator{
   venusAgeCalculate() {
     let venusAge = Math.round(this.humanAge * .62);
     return venusAge;
-  }    
+  }  
+    
 }
