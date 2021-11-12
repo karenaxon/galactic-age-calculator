@@ -11,4 +11,9 @@ describe('Calculator', () => {
   test('It should return 35', () => {
     expect(age1.humanAge).toEqual(35);
   });
+
+  test('mercuryAge should return 8.4', () => {
+    expect(age1.mercuryAge).toEqual(8.4);
+  });
+
 });
