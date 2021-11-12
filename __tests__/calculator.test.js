@@ -12,12 +12,12 @@ describe('Calculator', () => {
     expect(age1.humanAge).toEqual(35);
   });
 
-  test('mercuryAge rounded up should return 8', () => {
+  test('mercuryAge rounded should return 8', () => {
     expect(age1.mercuryAge).toEqual(8);
   });
 
-  test('venusAge rounded up should return 22', () => {
-    expect(age1.mercuryAge).toEqual(22);
+  test('venusAge rounded should return 22', () => {
+    expect(age1.venusAge).toEqual(22);
   });
 
 });
