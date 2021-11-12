@@ -28,4 +28,8 @@ describe('Calculator', () => {
     expect(age1.jupiterAge).toEqual(415);
   });
 
+  test('humanLifeExpectancy should return 77.3', () => {
+    expect(age1.humanLifeExpectancy).toEqual(77.3);
+  });
+
 });
