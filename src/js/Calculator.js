@@ -8,8 +8,7 @@ export default class Calculator{
   }
 
   mercuryAgeCalculate() {
-    let mercuryAge = this.humanAge *.24;
-    console.log(this.mercuryAge);
+    let mercuryAge = Math.round(this.humanAge *.24);
     return mercuryAge;
   }  
 }
