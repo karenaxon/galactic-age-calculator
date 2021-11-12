@@ -46,4 +46,10 @@ describe('Calculator', () => {
   test('mercuryYearsLeft rounded should return 224', () => {
     expect(age2.mercuryYearsLeft).toEqual(224);
   });
+
+    // #8
+    test('venusYearsLeft rounded should return 2', () => {
+      expect(age2.mercuryYearsLeft).toEqual(2);
+    });
+
 });
