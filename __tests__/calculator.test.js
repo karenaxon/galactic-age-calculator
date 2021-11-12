@@ -49,7 +49,7 @@ describe('Calculator', () => {
 
     // #8
     test('venusYearsLeft rounded should return 2', () => {
-      expect(age2.mercuryYearsLeft).toEqual(2);
+      expect(age2.venusYearsLeft).toEqual(2);
     });
 
 });

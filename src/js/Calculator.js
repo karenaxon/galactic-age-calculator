@@ -7,7 +7,7 @@ export default class Calculator{
     this.jupiterAge = this.jupiterAgeCalculate();
     this.humanLifeExpectancy = humanLifeExpectancy;
     this.mercuryYearsLeft = this.mercuryYearsLeftCalculate();
-    this.venusYearsLeft = "";
+    this.venusYearsLeft = this.venusYearsLeftCalculate();
     this.marsYearsLeft = "";
     this.jupiterYearsLeft = "";
   }
@@ -31,12 +31,17 @@ export default class Calculator{
     let jupiterAge = Math.round(this.humanAge * 11.86);
     return jupiterAge;
   } 
-  
+
   //venus, mars, jupiter
 
   mercuryYearsLeftCalculate() {
     let mercuryYearsLeft = Math.round(this.humanLifeExpectancy * 3) - this.mercuryAge;
     return mercuryYearsLeft;
+  }
+
+  venusYearsLeftCalculate() {
+    let venusYearsLeft = Math.round(this.humanLifeExpectancy / 3.2) - this.venusAge;
+    return venusYearsLeft;
   }
 
 }
