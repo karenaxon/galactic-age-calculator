@@ -4,33 +4,52 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Calculator from './js/Calculator.js';
 
+$("input").on('click', function(){
+  $("#invalid-input").hide();
+  $("#output").hide();
+});
+
 $("form").on("submit", function(event){
   event.preventDefault();
   let ageInput = parseInt($("#age-input").val());
   let expectancyAge = parseInt($("#expectancy-input").val());
-  $("form").trigger("reset");
 
   if(Number.isNaN(ageInput)) {
     $("#invalid-input").text("Invalid input. Please try again!");
     $("form").trigger("reset");
-  };
+  }
 
   let ages1 = new Calculator(ageInput, expectancyAge);
-  $("#output").text(ages1.humanYearsLeft).show();
+  const {humanAge, humanYearsLeft, mercuryAge, mercuryYearsLeft, venusAge, venusYearsLeft, marsAge, marsYearsLeft, jupiterAge, jupiterYearsLeft} = ages1;
 
-  let ages = new Map(
-    [
-      ["Human", ["Age", ages1.humanAge], ["Life Expectancy ", ages1.humanYearsLeft]],
-      ["Mercury", ["Age", ages1.mercuryAge], ["Life Expectancy ", ages1.mercuryYearsLeft]],
-      ["Venus", ["Age", ages1.venusAge], ["Life Expectancy ", ages1.venusYearsLeft]],
-      ["Mars", ["Age", ages1.marsAge], ["Life Expectancy ", ages1.marsYearsLeft]],
-      ["Jupiter", ["Age", ages1.jupiterAge], ["Life Expectancy ", ages1.jupiterYearsLeft]],
-    ]
-  );
-
-  ages.forEach((key, value) => {
-    let string = "";
-    $("#output").html(`${key} ${value}`).show();
-  });
-
+  $("#output").html(`<div class="row text-center">
+  <div class="col-4"<p><strong>Planet</strong></p></div>
+  <div class="col-4"<p><strong>Age</strong></p></div>
+  <div class="col-4"<p><strong>Years Left</strong></p></div>
+  </div>
+  <div class="row text-center">
+  <div class="col-4"<p class="h2">Earth</p></div>
+  <div class="col-4"<p class="h2">${humanAge}</p></div>
+  <div class="col-4"<p class="h2">${humanYearsLeft}</p></div>
+  </div>
+  <div class="row text-center">
+  <div class="col-4"<p class="h2">Mercury</p></div>
+  <div class="col-4"<p class="h2">${mercuryAge}</p></div>
+  <div class="col-4"<p class="h2">${mercuryYearsLeft}</p></div>
+  </div>
+  <div class="row text-center">
+  <div class="col-4"<p class="h2">Venus</p></div>
+  <div class="col-4"<p class="h2">${venusAge}</p></div>
+  <div class="col-4"<p class="h2">${venusYearsLeft}</p></div>
+  </div>
+  <div class="row text-center">
+  <div class="col-4"<p class="h2">Mars</p></div>
+  <div class="col-4"<p class="h2">${marsAge}</p></div>
+  <div class="col-4"<p class="h2">${marsYearsLeft}</p></div>
+  </div>
+  <div class="row text-center">
+  <div class="col-4"<p class="h2">Jupiter</p></div>
+  <div class="col-4"<p class="h2">${jupiterAge}</p></div>
+  <div class="col-4"<p class="h2">${jupiterYearsLeft}</p></div>
+  </div>`).show();
 });
